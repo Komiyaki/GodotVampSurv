@@ -1,0 +1,43 @@
+extends Node
+class_name health
+
+signal health_change(current_health: int, max_health: int)
+signal damage(damage_amt: int, current_health: int)
+signal healed(heal_amt: int, current_health: int)
+signal dead
+
+@export var max_health: int = 100
+
+var current_health: int
+var is_dead: bool = false
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	current_health = max_health
+	health_change.emit(current_health, max_health)
+
+func take_damage(damage_amt: int) -> void:
+	current_health = current_health - damage_amt
+	damage.emit(damage_amt, current_health)
+	health_change.emit(current_health, max_health)
+	
+	if current_health <= 0:
+		is_dead = true
+		dead.emit()
+
+func heal(heal_amt: int) -> void:
+	if (current_health + heal_amt) > max_health:
+		current_health = max_health
+	else:
+		current_health += heal_amt
+	healed.emit(heal_amt, current_health)
+	health_change.emit(current_health, max_health)
+	
+func increase_max_health(amount_inc: int) -> void:
+	max_health += amount_inc
+	heal(amount_inc)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

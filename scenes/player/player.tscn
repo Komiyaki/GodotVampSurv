@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b8hsu0aiwamdx" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://rwp3gjwe8mlo" path="res://scenes/player/player_manager.gd" id="1_dovo2"]
+[ext_resource type="Script" uid="uid://cx3mtwipka1p2" path="res://scenes/systems/health.gd" id="3_gmlin"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 height = 20.0
@@ -20,3 +21,7 @@ texture = ExtResource("1_4flbx")
 shape = SubResource("CapsuleShape2D_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1793027746]
+
+[node name="Health" type="Node2D" parent="." unique_id=140673496]
+script = ExtResource("3_gmlin")
+max_health = 50
