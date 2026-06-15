@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://cxn83oaq4tfse"]
 
-[node name="GameLevel" type="Node2D" unique_id=2075436351]
+[ext_resource type="Script" uid="uid://dviygx0knstdd" path="res://scenes/game/game_manager.gd" id="1_bwyfi"]
+[ext_resource type="Script" uid="uid://dv5pavlxnapc0" path="res://ui_manager.gd" id="2_df5pp"]
+
+[node name="GameLevel" type="Node2D" unique_id=2075436351 node_paths=PackedStringArray("ui_manager")]
+script = ExtResource("1_bwyfi")
+ui_manager = NodePath("UI")
+
+[node name="UI" type="MarginContainer" parent="." unique_id=1671134409 node_paths=PackedStringArray("state_text")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_df5pp")
+state_text = NodePath("HBoxContainer/VBoxContainer/GameState")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=566824241]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/HBoxContainer" unique_id=968761501]
+layout_mode = 2
+
+[node name="GameState" type="Label" parent="UI/HBoxContainer/VBoxContainer" unique_id=1588047381]
+layout_mode = 2

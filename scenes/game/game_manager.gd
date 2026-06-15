@@ -12,13 +12,29 @@ enum GameState {
    RESTART,
 }
 
-var game_state: GameState = GameState.FIRST_LOAD
+@export var ui_manager: UIManager
+@export var enemy_manager: EnemyManager
+
+var game_state: GameState = GameState.FIRST_LOAD:
+    set(value):
+        game_state = value
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+    _check_dependencies()
 
     # get references to all necessary stuff, esp game_data autoload
     pass # Replace with function body.
+
+
+func _check_dependencies() -> void:
+    if ui_manager == null:
+        push_error("No ui_manager set on %s" % name)
+    if enemy_manager == null:
+        push_error("No enemy_manager set on %s" % name)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
