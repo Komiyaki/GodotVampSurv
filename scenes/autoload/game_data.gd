@@ -3,7 +3,9 @@ extends Node
 const DATA_PATH: String = "user://game_data.json"
 const SAVE_PATH: String = "user://save_data.json"
 
-const ENEMY_POOL: int = 100
+const ENEMY_SCNENE_PATH: String = "res://scenes/enemy/enemy.tscn"
+
+const ENEMY_POOL_SIZE: int = 100
 
 
 
