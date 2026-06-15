@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cxn83oaq4tfse"]
 
+[ext_resource type="Script" uid="uid://dviygx0knstdd" path="res://scenes/game/game_manager.gd" id="1_axn74"]
 [ext_resource type="Texture2D" uid="uid://cq8jdptkt580p" path="res://assets/map maker/Set 1.png" id="1_wqyo1"]
 [ext_resource type="Texture2D" uid="uid://ch2r6c3kvh8pt" path="res://assets/map maker/Set 1.0.png" id="2_v7qp1"]
 [ext_resource type="Texture2D" uid="uid://daffa06dmdm7b" path="res://assets/map maker/Set 1.1.png" id="3_61fi8"]
@@ -7,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dts8y0kvoemnj" path="res://assets/map maker/Set 1.3.png" id="5_5d4hl"]
 [ext_resource type="Texture2D" uid="uid://b15x3r0daq32k" path="res://assets/map maker/Set 3.5.png" id="6_dv4fs"]
 [ext_resource type="Texture2D" uid="uid://d0u5ue14vcv0e" path="res://assets/map maker/Set 4.5.png" id="7_vugdd"]
+[ext_resource type="Script" uid="uid://dmk4nuyriaww2" path="res://scenes/game/ui_manager.gd" id="9_fxxt8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gm1p2"]
 texture = ExtResource("1_wqyo1")
@@ -998,30 +1000,8 @@ sources/4 = SubResource("TileSetAtlasSource_emgcl")
 sources/5 = SubResource("TileSetAtlasSource_tj1nq")
 sources/6 = SubResource("TileSetAtlasSource_f88ab")
 
-<<<<<<< Updated upstream
-[ext_resource type="Script" uid="uid://dviygx0knstdd" path="res://scenes/game/game_manager.gd" id="1_bwyfi"]
-[ext_resource type="Script" uid="uid://dv5pavlxnapc0" path="res://ui_manager.gd" id="2_df5pp"]
-
-[node name="GameLevel" type="Node2D" unique_id=2075436351 node_paths=PackedStringArray("ui_manager")]
-script = ExtResource("1_bwyfi")
-ui_manager = NodePath("UI")
-
-[node name="UI" type="MarginContainer" parent="." unique_id=1671134409 node_paths=PackedStringArray("state_text")]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("2_df5pp")
-state_text = NodePath("HBoxContainer/VBoxContainer/GameState")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=566824241]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/HBoxContainer" unique_id=968761501]
-layout_mode = 2
-
-[node name="GameState" type="Label" parent="UI/HBoxContainer/VBoxContainer" unique_id=1588047381]
-layout_mode = 2
-=======
 [node name="GameLevel" type="Node2D" unique_id=2075436351]
+script = ExtResource("1_axn74")
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=1280365157]
 tile_set = SubResource("TileSet_qsxfn")
@@ -1031,4 +1011,17 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAABAAAAAAACAAAAAAACAAAAAAACAAA
 tile_set = SubResource("TileSet_2obac")
 
 [node name="Decoration" type="TileMapLayer" parent="." unique_id=1454411763]
->>>>>>> Stashed changes
+
+[node name="UI" type="MarginContainer" parent="." unique_id=1643706367]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_fxxt8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=975228927]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/HBoxContainer" unique_id=1518702561]
+layout_mode = 2
+
+[node name="GameState" type="Label" parent="UI/HBoxContainer/VBoxContainer" unique_id=1283702022]
+layout_mode = 2
