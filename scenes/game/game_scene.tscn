@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b57iqmbkk1ids" path="res://assets/map maker/Torch Yellow.png" id="12_twdok"]
 [ext_resource type="Texture2D" uid="uid://uibojc7yp0b4" path="res://assets/map maker/Vase Shine Anim.png" id="13_vbj3e"]
 [ext_resource type="Texture2D" uid="uid://b62aaq1bjbufk" path="res://assets/map maker/Water.png" id="14_lpo6v"]
+[ext_resource type="PackedScene" uid="uid://ce08eoa4g8t0i" path="res://scenes/player/player.tscn" id="16_jruum"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gm1p2"]
 texture = ExtResource("1_wqyo1")
@@ -1478,3 +1479,6 @@ layout_mode = 2
 
 [node name="GameState" type="Label" parent="UI/HBoxContainer/VBoxContainer" unique_id=1283702022]
 layout_mode = 2
+
+[node name="Player" parent="." unique_id=440456721 instance=ExtResource("16_jruum")]
+position = Vector2(615, 353)

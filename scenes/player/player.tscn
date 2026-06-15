@@ -4,14 +4,16 @@
 [ext_resource type="Script" uid="uid://rwp3gjwe8mlo" path="res://scenes/player/player_manager.gd" id="1_dovo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
-radius = 63.0
-height = 128.0
+radius = 14.0
+height = 28.0
 
 [node name="Player" type="CharacterBody2D" unique_id=440456721]
 motion_mode = 1
 script = ExtResource("1_dovo2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179181593]
+position = Vector2(-1.1920929e-07, 0)
+scale = Vector2(0.171875, 0.16796875)
 texture = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1714246382]
