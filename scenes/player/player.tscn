@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://rwp3gjwe8mlo" path="res://scenes/player/player_manager.gd" id="1_dovo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
-radius = 14.0
-height = 28.0
+height = 20.0
 
 [node name="Player" type="CharacterBody2D" unique_id=440456721]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_dovo2")
 
@@ -18,3 +18,5 @@ texture = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1714246382]
 shape = SubResource("CapsuleShape2D_onrkg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1793027746]
