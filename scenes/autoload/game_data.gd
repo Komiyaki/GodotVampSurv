@@ -23,32 +23,31 @@ const INTERROUND_TIMER: float = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    # _load_data()
-    pass # Replace with function body.
+	# _load_data()
+	pass # Replace with function body.
 
 func _load_data() -> void:
-    if not FileAccess.file_exists(DATA_PATH):
-        push_error("No data file found at %s" % DATA_PATH)
-        return # Error! We don't have data to load.
+	if not FileAccess.file_exists(DATA_PATH):
+		push_error("No data file found at %s" % DATA_PATH)
+		return # Error! We don't have data to load.
 
-    var data_file = FileAccess.open(DATA_PATH, FileAccess.READ)
-    while data_file.get_position() < data_file.get_length():
-        print(data_file.get_line())
-        # var json_string = data_file.get_line()
-        # var json = JSON.new()
+	var data_file = FileAccess.open(DATA_PATH, FileAccess.READ)
+	while data_file.get_position() < data_file.get_length():
+		print(data_file.get_line())
+		# var json_string = data_file.get_line()
+		# var json = JSON.new()
 
-        # var parse_result = json.parse(json_string)
-        # if not parse_result == OK:
-        #     push_error("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
-        #     continue
+		# var parse_result = json.parse(json_string)
+		# if not parse_result == OK:
+		#     push_error("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+		#     continue
 
-        # var node_data = json.data
-
+		# var node_data = json.data
 func save_game() -> void:
-    pass
+	pass
 
 func load_game() -> void:
-    if not FileAccess.file_exists("user://save_data.json"):
-        push_error("No save file found at %s" % SAVE_PATH)
-        return # Error! We don't have a save to load.
-    pass
+	if not FileAccess.file_exists("user://save_data.json"):
+		push_error("No save file found at %s" % SAVE_PATH)
+		return # Error! We don't have a save to load.
+	pass
