@@ -4,12 +4,22 @@ const DATA_PATH: String = "user://game_data.json"
 const SAVE_PATH: String = "user://save_data.json"
 
 const ENEMY_SCENE_PATH: String = "res://scenes/enemy/enemy.tscn"
-const ENEMY_POOL_SIZE: int = 100
+const ENEMY_POOL_SIZE_INITIAL: int = 100
+const ENEMY_POOL_INCREASE_AMOUNT: int = 10
 
-const ENEMY_SPAWN_FIELD_RANGE_X = 1280
-const ENEMY_SPAWN_FIELD_RANGE_Y = 720
-const ENEMY_SPAWN_FIELD_OFFSET = 32
-const ENEMY_SPAWN_CAMERA_RANGE_SQR = 100
+const ENEMY_SPAWN_FIELD_RANGE_X: int = 1280
+const ENEMY_SPAWN_FIELD_RANGE_Y: int = 720
+const ENEMY_SPAWN_FIELD_OFFSET: int = 32
+const ENEMY_SPAWN_CAMERA_RANGE_SQR: int = 500
+
+const ENEMY_SPAWN_TIMER: float = 5
+const ENEMY_SPAWN_AMOUNT_INITIAL: int = 10
+
+const SPAWN_FUNC_FACTOR_INITIAL: float = 20
+const SPAWN_FUNC_FACTOR_LINEAR: float = 1.5
+const SPAWN_FUNC_FACTOR_EXP: float = 1.193
+
+const INTERROUND_TIMER: float = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
