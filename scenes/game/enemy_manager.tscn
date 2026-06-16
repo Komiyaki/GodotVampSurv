@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cxckk8vqlox2j"]
+
+[ext_resource type="Script" uid="uid://dx1vnr3idpage" path="res://scenes/game/enemy_manager.gd" id="1_d7uud"]
+
+[node name="EnemyManager" type="Node2D" unique_id=255586920 node_paths=PackedStringArray("inactive_node", "active_node")]
+script = ExtResource("1_d7uud")
+inactive_node = NodePath("InactiveEnemies")
+active_node = NodePath("ActiveEnemies")
+
+[node name="InactiveEnemies" type="Node2D" parent="." unique_id=1814496168]
+position = Vector2(-100, -100)
+
+[node name="ActiveEnemies" type="Node2D" parent="." unique_id=550474783]

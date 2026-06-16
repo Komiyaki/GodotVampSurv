@@ -47,6 +47,7 @@ func _process(delta: float) -> void:
         GameState.FIRST_LOAD:
             game_state = GameState.FIRST_LOAD
             # for now dont do much, just start spawning
+            enemy_manager.fill_enemy_pool()
             # might play some intro animation or something idk
             game_state = GameState.SPAWNING
             pass

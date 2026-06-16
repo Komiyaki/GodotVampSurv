@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://uibojc7yp0b4" path="res://assets/map maker/Vase Shine Anim.png" id="13_vbj3e"]
 [ext_resource type="Texture2D" uid="uid://b62aaq1bjbufk" path="res://assets/map maker/Water.png" id="14_lpo6v"]
 [ext_resource type="PackedScene" uid="uid://ce08eoa4g8t0i" path="res://scenes/player/player.tscn" id="16_jruum"]
-[ext_resource type="Script" uid="uid://dx1vnr3idpage" path="res://scenes/game/enemy_manager.gd" id="17_20rup"]
+[ext_resource type="PackedScene" uid="uid://cxckk8vqlox2j" path="res://scenes/game/enemy_manager.tscn" id="17_20rup"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gm1p2"]
 texture = ExtResource("1_wqyo1")
@@ -1674,5 +1674,4 @@ text = "GameState"
 [node name="Player" parent="." unique_id=440456721 instance=ExtResource("16_jruum")]
 position = Vector2(157, 77)
 
-[node name="EnemyManager" type="Node2D" parent="." unique_id=1984447122]
-script = ExtResource("17_20rup")
+[node name="EnemyManager" parent="." unique_id=255586920 instance=ExtResource("17_20rup")]

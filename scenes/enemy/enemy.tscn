@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://box0ynp2lal30"]
 
+[ext_resource type="Script" uid="uid://gtwdphchmtq" path="res://scenes/game/pooled_object.gd" id="1_40wdo"]
 [ext_resource type="Texture2D" uid="uid://b8hsu0aiwamdx" path="res://icon.svg" id="1_a6uwu"]
 [ext_resource type="Script" uid="uid://cx3mtwipka1p2" path="res://scenes/systems/health.gd" id="2_a3pup"]
 
@@ -9,6 +10,7 @@ height = 128.0
 
 [node name="Enemy" type="CharacterBody2D" unique_id=440456721]
 motion_mode = 1
+script = ExtResource("1_40wdo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179181593]
 texture = ExtResource("1_a6uwu")
