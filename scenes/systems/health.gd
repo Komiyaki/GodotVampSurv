@@ -5,6 +5,7 @@ signal health_change(current_health: int, max_health: int)
 signal dead
 
 @export var max_health: int = 100
+@export var stat_comp: stats
 
 var current_health: int
 var is_dead: bool = false
@@ -16,7 +17,10 @@ func _ready() -> void:
     health_change.emit(current_health, max_health)
 
 func take_damage(damage_amt: int) -> void:
-    current_health = current_health - damage_amt
+    var defense := 0
+    if stat_comp != null:
+        defense = stat_comp.get_stat(stats.DEFENSE)
+    current_health = current_health - (damage_amt - defense)
     if current_health <= 0:
         is_dead = true
         dead.emit()

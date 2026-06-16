@@ -64,6 +64,7 @@ func spawn_n_enemies(count: int, camera_pos: Vector2) -> void:
             _spawn_enemy(spawn_pos)
         pass
 
+
 func _spawn_enemy(location: Vector2) -> void:
     var enemy_id: int = enemy_pool_inactive.keys()[0]
     var enemy: PooledObject = enemy_pool_inactive.get(enemy_id)

@@ -11,7 +11,6 @@ const ENEMY_SPAWN_FIELD_RANGE_Y = 720
 const ENEMY_SPAWN_FIELD_OFFSET = 32
 const ENEMY_SPAWN_CAMERA_RANGE_SQR = 100
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
     # _load_data()

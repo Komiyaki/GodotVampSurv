@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b8hsu0aiwamdx" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://rwp3gjwe8mlo" path="res://scenes/player/player_manager.gd" id="1_dovo2"]
 [ext_resource type="Script" uid="uid://cx3mtwipka1p2" path="res://scenes/systems/health.gd" id="3_gmlin"]
+[ext_resource type="Script" uid="uid://cq8f6dvsui56o" path="res://scenes/systems/stats.gd" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 height = 20.0
@@ -12,16 +13,19 @@ collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_dovo2")
 
+[node name="health" type="Node2D" parent="." unique_id=140673496]
+script = ExtResource("3_gmlin")
+max_health = 50
+
+[node name="stats" type="Node2D" parent="." unique_id=1384741699]
+script = ExtResource("4_lvxji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1714246382]
+shape = SubResource("CapsuleShape2D_onrkg")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179181593]
 position = Vector2(-1.1920929e-07, 0)
 scale = Vector2(0.171875, 0.16796875)
 texture = ExtResource("1_4flbx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1714246382]
-shape = SubResource("CapsuleShape2D_onrkg")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1793027746]
-
-[node name="Health" type="Node2D" parent="." unique_id=140673496]
-script = ExtResource("3_gmlin")
-max_health = 50
